@@ -9,7 +9,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
         appBar: AppBar(
           backgroundColor: Colors.black,
           centerTitle: true,
@@ -27,10 +26,10 @@ class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
-      child: Column(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: <Widget>[
-          Expanded(child: Image.asset('assets/images/pasta.jpg')),
-          Expanded(child: Image.asset('assets/images/steak.png')),
+          Image.asset('images/steak.png'),
         ],
       ),
     );
